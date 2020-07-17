@@ -14,11 +14,9 @@ class ImageService {
   }
   getImage() {
     imgApi.get().then(res => {
-      console.log(res.data);
       let bgImg = res.data.url
       document.body.style.backgroundImage = bgImg
       store.commit("imgUrl", bgImg)
-      console.log(store.State.imgUrl);
 
     }).catch(err => console.error(err))
   }

@@ -8,10 +8,19 @@ const weatherApi = axios.create({
 });
 
 class WeatherService {
-  async getWeather() {
-    console.log("Calling the Weatherman");
-    let res = await weatherApi.get();
-    store.commit("weather", new Weather(res.data));
+  toggleTemp() {
+    if (store.State.weather.toggle == false) {
+      store.State.weather.toggle = true
+    } else {
+      store.State.weather.toggle = false
+    }
+  }
+  getWeather() {
+    weatherApi.get().then(res => {
+      console.log(res.data);
+      store.commit("weather", new Weather(res.data));
+
+    }).catch(err => console.error(err))
   }
 }
 
