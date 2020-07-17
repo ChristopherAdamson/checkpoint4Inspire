@@ -18,7 +18,6 @@ class TodoService {
 
   addTodoAsync(todo) {
     todoApi.post("", todo).then(res => {
-      console.log(res);
       this.getTodos()
     }).catch(err => console.error(err))
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
@@ -26,7 +25,6 @@ class TodoService {
 
   toggleTodoStatusAsync(todoId) {
     let foundTodo = store.State.todos.find(todo => todo.id == todoId);
-    console.log(todoId);
     if (foundTodo.completed == true) {
       foundTodo.completed = false
     } else {
@@ -38,7 +36,6 @@ class TodoService {
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
     todoApi.put(todoId, foundTodo).then(res => {
-      console.log(res);
       this.getTodos()
     }).catch(err => console.error(err))
     //TODO do you care about this data? or should you go get something else?
