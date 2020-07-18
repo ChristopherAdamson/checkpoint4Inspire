@@ -18,15 +18,19 @@ export default class Weather {
     this.Ftemp = (((this.kelvin - 273.15) * 1.8) + 32).toFixed(1)
     this.Ctemp = (this.kelvin - 273.15).toFixed(1)
     this.toggle = false
+    this.Cmin = (this.minTemp - 273.15).toFixed(1)
+    this.Fmin = (((this.minTemp - 273.15) * 1.8) + 32).toFixed(1)
+    this.cMax = (this.maxTemp - 273.15).toFixed(1)
+    this.fMax = (((this.maxTemp - 273.15) * 1.8) + 32).toFixed(1)
   }
   get Template() {
     return `
-    <div class="col-3 border border-secondary rounded dropshadow-lg">
+    <div class="col-3 border border-secondary rounded dropshadow-lg  white-trans m-3">
     <h5>${this.city}</h5>
     <img onclick="app.weatherController.toggleTemp()" src="http://openweathermap.org/img/w/` + `${this.icon}` + `.png">
     <h5 id="temp"> ${this.toggle == false ? `Temp: ${this.Ftemp}F°` : `Temp: ${this.Ctemp}C°`}</h5>
-    <p> Min-Temp: ${this.minTemp} Max-temp: ${this.maxTemp}</p>
-    <p>${this.wind}</p>
+    <p> Min: ${this.toggle == false ? `${this.Fmin}` : `${this.Cmin}`} Max: ${this.toggle == false ? `${this.fMax}` : `${this.cMax}`}</p>
+    <p> Wind: ${this.wind} Mph</p>
     <p>${this.description}</p>
   </div>
     `

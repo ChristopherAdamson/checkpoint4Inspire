@@ -14,15 +14,16 @@
 </head>
 
 <body id="bg-image" class="img-fluid">
-	<main class="container-fluid">
-		<div id="weather" class="row justify-content-end white-trans">
-			Your Weather Template
-		</div>
 
-		<div id="quote" class="row fixed-bottom text-center justify-content-center">
-			The Quote
+	<main class="container-fluid">
+		<div id="weather" class="row justify-content-end">
 		</div>
-		<div class="row fixed-bottom justify-content-end p-5">
+		<div class="white-trans">
+			<div id="quote" class="row fixed-bottom text-center justify-content-center quoteBody white-trans ">
+			</div>
+			<div id="author" class="extra fixed-bottom text-center"></div>
+		</div>
+		<div class="row fixed-top p-5">
 			<div id="todo-error"></div>
 			<div class="col-3 rounded border border-secondary white-trans">
 				<form class="" onsubmit="app.todoController.addTodo(event)">

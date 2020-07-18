@@ -1,5 +1,6 @@
 import Weather from "./models/weather.js";
 import Todo from "./models/todo.js"
+import Quote from "./models/quote.js"
 
 let _state = {
   /**@type {Weather} */
@@ -7,7 +8,9 @@ let _state = {
   /**@type {Todo[]}*/
   todos: [], //TODO change 'any' to your todo model
   /**@type {string}*/
-  imgUrl: ""
+  imgUrl: "",
+  /**@type {Quote} */
+  quotes: null
 
 };
 
@@ -17,7 +20,8 @@ let _state = {
 let _listeners = {
   weather: [],
   todos: [],
-  imgUrl: []
+  imgUrl: [],
+  quotes: []
 };
 
 /**

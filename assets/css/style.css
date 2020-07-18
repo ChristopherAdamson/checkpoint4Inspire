@@ -12,3 +12,11 @@ body{
   background-color: hsl(0, 0%, 96%, 0.4);
   
 }
+
+
+.extra{
+  display: none;
+}
+.quoteBody:hover + .extra {
+  display: block!important;
+}
