@@ -21,20 +21,24 @@
 	<main class="container-fluid">
 		<div class="col-3 rounded border border-secondary white-trans float-right	">
 			<form class="" onsubmit="app.todoController.addTodo(event)">
+
 				<div class="form-group">
 					<label for="todo"></label>
 					<input type="text" name="todo" class="form-control" placeholder="What do you want to do today?">
 					<button class="btn btn-block btn-outline-info">Add Todo</button>
 				</div>
 			</form>
+			<div id="tracking" class="">
+				<p>Todos remaining: 4</p>
+			</div>
 			<div class="row align-items-center " id="todos"></div>
 		</div>
 		</div>
 	</main>
-	<footer class="white-trans fixed-bottom ">
-		<div id="quote" class="row fixed-bottom text-center justify-content-center quoteBody textOutline ">
-		</div>
-		<div id="author" class="extra fixed-bottom text-center textOutline"></div>
+	<footer class="white-trans fixed-bottom bg-black container-fluid">
+		<p id="quote" class="row fixed-bottom text-center justify-content-center quoteBody textOutline my-0 mx-2">
+		</p>
+		<p id="author" class="row extra fixed-bottom text-center textOutline mt-2"></p>
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

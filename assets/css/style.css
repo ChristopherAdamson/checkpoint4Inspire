@@ -9,7 +9,7 @@ body{
 }
 
 .white-trans{
-  background-color: hsl(0, 0%, 96%, 0.4);
+  background-color: rgba(139, 135, 135, 0.4);
   
 }
 
@@ -23,6 +23,15 @@ body{
 
 .textOutline{
 	color: white;
-	font-size: 33px;
-  -webkit-text-stroke: 1px black;
+	font-size: 22px;
+  -webkit-text-stroke: .75px black;
+}
+
+.bg-black {
+  background-color: darkslategrey;
+}
+
+.tOutline{
+  color: white;
+  -webkit-text-stroke: .75px black;
 }
