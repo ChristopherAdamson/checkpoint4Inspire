@@ -14,29 +14,28 @@
 </head>
 
 <body id="bg-image" class="img-fluid">
-
-	<main class="container-fluid">
+	<header>
 		<div id="weather" class="row justify-content-end">
 		</div>
-		<div class="white-trans">
-			<div id="quote" class="row fixed-bottom text-center justify-content-center quoteBody white-trans ">
-			</div>
-			<div id="author" class="extra fixed-bottom text-center"></div>
+	</header>
+	<main class="container-fluid">
+		<div class="col-3 rounded border border-secondary white-trans float-right	">
+			<form class="" onsubmit="app.todoController.addTodo(event)">
+				<div class="form-group">
+					<label for="todo"></label>
+					<input type="text" name="todo" class="form-control" placeholder="What do you want to do today?">
+					<button class="btn btn-block btn-outline-info">Add Todo</button>
+				</div>
+			</form>
+			<div class="row align-items-center " id="todos"></div>
 		</div>
-		<div class="row fixed-top p-5">
-			<div id="todo-error"></div>
-			<div class="col-3 rounded border border-secondary white-trans">
-				<form class="" onsubmit="app.todoController.addTodo(event)">
-					<div class="form-group">
-						<label for="todo"></label>
-						<input type="text" name="todo" class="form-control" placeholder="What do you want to do today?">
-						<button class="btn btn-block btn-outline-info">Add Todo</button>
-					</div>
-				</form>
-				<div class="row align-items-center " id="todos"></div>
-			</div>
 		</div>
 	</main>
+	<footer class="white-trans fixed-bottom ">
+		<div id="quote" class="row fixed-bottom text-center justify-content-center quoteBody textOutline ">
+		</div>
+		<div id="author" class="extra fixed-bottom text-center textOutline"></div>
+	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

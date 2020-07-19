@@ -25,13 +25,13 @@ export default class Weather {
   }
   get Template() {
     return `
-    <div class="col-3 border border-secondary rounded dropshadow-lg  white-trans m-3">
+    <div class="col-2 text-center border border-secondary rounded dropshadow-lg  white-trans m-3">
     <h5>${this.city}</h5>
     <img onclick="app.weatherController.toggleTemp()" src="http://openweathermap.org/img/w/` + `${this.icon}` + `.png">
-    <h5 id="temp"> ${this.toggle == false ? `Temp: ${this.Ftemp}F°` : `Temp: ${this.Ctemp}C°`}</h5>
-    <p> Min: ${this.toggle == false ? `${this.Fmin}` : `${this.Cmin}`} Max: ${this.toggle == false ? `${this.fMax}` : `${this.cMax}`}</p>
+    <h5 onclick="app.weatherController.toggleTemp()" id="temp"> ${this.toggle == false ? `Temp: ${this.Ftemp}F°` : `Temp: ${this.Ctemp}C°`}</h5>
+    <p> Min: ${this.toggle == false ? `${this.Fmin}F°` : `${this.Cmin}C°`} Max: ${this.toggle == false ? `${this.fMax}F°` : `${this.cMax}C°`}</p>
     <p> Wind: ${this.wind} Mph</p>
-    <p>${this.description}</p>
+    <h5>${this.description}</h5>
   </div>
     `
   }
