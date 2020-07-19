@@ -1,3 +1,4 @@
+import store from "../store.js"
 
 
 
@@ -7,6 +8,7 @@ export default class Todo {
     this.description = data.description
     this.id = data._id
     this.completed = data.completed || false
+
   }
   get Template() {
     return `
@@ -18,4 +20,5 @@ export default class Todo {
   </div>
     `
   }
+
 }

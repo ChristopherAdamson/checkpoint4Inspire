@@ -7,12 +7,24 @@ function _drawTodos() {
   store.State.todos.forEach(todo => template += todo.Template)
   document.getElementById("todos").innerHTML = template
 }
+function _drawRemaining() {
+  let remaining = 0
+  store.State.todos.forEach(todo => {
+    if (todo.completed == false) {
+      remaining++
+    }
+  })
+
+  document.getElementById("remaining").innerHTML = `<p>Todos remaining: ${remaining}</p>`
+
+}
 
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
     TodoService.getTodos();
     store.subscribe("todos", _drawTodos)
+    store.subscribe("todos", _drawRemaining)
   }
 
   addTodo(e) {
