@@ -2,7 +2,7 @@ import store from "../store.js";
 
 
 let _timeApi = axios.create({
-  baseURL: "http://worldtimeapi.org/api/timezone/America/Boise",
+  baseURL: "//worldtimeapi.org/api/timezone/America/Boise",
   timeOut: 5000
 })
 class timeService {
