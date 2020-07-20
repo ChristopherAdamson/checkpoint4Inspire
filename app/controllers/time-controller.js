@@ -21,6 +21,7 @@ function _drawmilitary() {
   let time = store.State.date
   let hours = time.getHours()
   let minutes = time.getMinutes()
+  hours = hours < 12 ? '0' + hours : hours
   minutes = minutes < 10 ? '0' + minutes : minutes;
   let writtenTime = hours + ':' + minutes
   document.getElementById("clockmilitary").innerHTML = writtenTime
