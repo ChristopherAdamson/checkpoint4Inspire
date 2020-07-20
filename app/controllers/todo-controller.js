@@ -15,7 +15,7 @@ function _drawRemaining() {
     }
   })
 
-  document.getElementById("remaining").innerHTML = `<p>Todos remaining: ${remaining}</p>`
+  document.getElementById("remaining").innerHTML = `<p class="tOutline">Todos remaining: ${remaining}</p>`
 
 }
 

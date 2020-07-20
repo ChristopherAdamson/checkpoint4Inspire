@@ -25,7 +25,7 @@ export default class Weather {
   }
   get Template() {
     return `
-    <div class="col-2 text-center border border-secondary rounded dropshadow-lg  white-trans m-3">
+    <div class="col-2 text-center border border-secondary rounded dropshadow-lg  white-trans m-3 tOutline">
     <h5>${this.city}<img onclick="app.weatherController.toggleTemp()" src="http://openweathermap.org/img/w/` + `${this.icon}` + `.png"></h5>
     
     <h5 onclick="app.weatherController.toggleTemp()" id="temp"> ${this.toggle == false ? `Temp: ${this.Ftemp}F°` : `Temp: ${this.Ctemp}C°`}</h5>

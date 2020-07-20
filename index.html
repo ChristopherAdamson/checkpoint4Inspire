@@ -19,19 +19,24 @@
 		</div>
 	</header>
 	<main class="container-fluid">
-		<div class="col-3 rounded border border-secondary white-trans float-right	">
-			<form class="" onsubmit="app.todoController.addTodo(event)">
-
-				<div class="form-group">
-					<label for="todo"></label>
-					<input type="text" name="todo" class="form-control" placeholder="What do you want to do today?">
-					<button class="btn btn-block btn-outline-info">Add Todo</button>
-				</div>
-			</form>
-			<div id="remaining" class="">
-
+		<div class="row  ">
+			<div class="offset-4 col-4">
+				<h1 id="clock" class="white-trans tOutline text-center"></h1>
 			</div>
-			<div class="row align-items-center " id="todos"></div>
+			<div class="col-3 rounded border border-secondary white-trans ml-auto	">
+				<form class="" onsubmit="app.todoController.addTodo(event)">
+
+					<div class="form-group">
+						<label for="todo"></label>
+						<input type="text" name="todo" class="form-control" placeholder="What do you want to do today?">
+						<button class="btn btn-block btn-outline-info">Add Todo</button>
+					</div>
+				</form>
+				<div id="remaining" class="">
+
+				</div>
+				<div class="row align-items-center " id="todos"></div>
+			</div>
 		</div>
 		</div>
 	</main>

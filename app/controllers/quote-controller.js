@@ -13,7 +13,6 @@ function _drawQuote() {
 
 export default class QuoteController {
   constructor() {
-    console.log(Date.now());
     store.subscribe("quotes", _drawQuote)
   }
 }

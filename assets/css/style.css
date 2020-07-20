@@ -9,7 +9,7 @@ body{
 }
 
 .white-trans{
-  background-color: rgba(139, 135, 135, 0.4);
+  background-color: rgba(139, 135, 135, 0.5);
   
 }
 
@@ -25,6 +25,7 @@ body{
 	color: white;
 	font-size: 22px;
   -webkit-text-stroke: .75px black;
+  font-weight: bold;
 }
 
 .bg-black {
@@ -34,4 +35,11 @@ body{
 .tOutline{
   color: white;
   -webkit-text-stroke: .75px black;
+  font-weight: bold;
+}
+
+.tDanger{
+  color: rgb(209, 19, 19);
+  -webkit-text-stroke: .4px black;
+  font-weight: bold;
 }

@@ -10,7 +10,8 @@ let _state = {
   /**@type {string}*/
   imgUrl: "",
   /**@type {Quote} */
-  quotes: null
+  quotes: null,
+  date: null
 
 };
 
@@ -21,7 +22,8 @@ let _listeners = {
   weather: [],
   todos: [],
   imgUrl: [],
-  quotes: []
+  quotes: [],
+  date: []
 };
 
 /**
