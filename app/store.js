@@ -11,7 +11,10 @@ let _state = {
   imgUrl: "",
   /**@type {Quote} */
   quotes: null,
-  date: null
+  date: null,
+  /**@type {string}*/
+  user: "",
+
 
 };
 
@@ -23,7 +26,8 @@ let _listeners = {
   todos: [],
   imgUrl: [],
   quotes: [],
-  date: []
+  date: [],
+  user: []
 };
 
 /**

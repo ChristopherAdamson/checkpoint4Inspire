@@ -14,36 +14,42 @@
 </head>
 
 <body id="bg-image" class="img-fluid">
-	<header>
-		<div id="weather" class="row justify-content-end">
+	<header class="container-fluid">
+		<div id="weather" class="row mx-3"></div>
+		<h1 id="greet" class=" tOutline text-center "></h1>
+		<div class="row justify-content-center">
+			<div class=" text-center col-3 ">
+				<h1 id="clockstandard" class="white-trans tOutline text-center my-0"></h1>
+				<h1 id="clockmilitary" class="white-trans tOutline text-center hidden my-0"></h1>
+				<button id="butsta" disabled onclick="app.timeController.toggle('standard')"
+					class="btn white-trans tOutline p-0">standard</button>
+				<button id="butmil" onclick="app.timeController.toggle('military')"
+					class="btn white-trans tOutline p-0">military</button>
+			</div>
 		</div>
 	</header>
 	<main class="container-fluid">
 		<div class="row  ">
-			<div class="offset-4 col-4">
-				<h1 id="clock" class="white-trans tOutline text-center"></h1>
-			</div>
-			<div class="col-3 rounded border border-secondary white-trans ml-auto	">
-				<form class="" onsubmit="app.todoController.addTodo(event)">
 
+			<div class="col-3 rounded border border-secondary white-trans offset-8 fixed-top	mt-2">
+				<form class="" onsubmit="app.todoController.addTodo(event)">
 					<div class="form-group">
 						<label for="todo"></label>
 						<input type="text" name="todo" class="form-control" placeholder="What do you want to do today?">
-						<button class="btn btn-block btn-outline-info">Add Todo</button>
+						<button class="btn btn-block btn-info ">Add Todo</button>
 					</div>
 				</form>
 				<div id="remaining" class="">
-
 				</div>
 				<div class="row align-items-center " id="todos"></div>
 			</div>
 		</div>
 		</div>
 	</main>
-	<footer class="white-trans fixed-bottom bg-black container-fluid">
-		<p id="quote" class="row fixed-bottom text-center justify-content-center quoteBody textOutline my-0 mx-2">
+	<footer class="white-trans fixed-bottom bg-black container-fluid mt-5">
+		<p id="quote" class="row fixed-bottom text-center justify-content-center quoteBody textOutline mt-5 mx-2">
 		</p>
-		<p id="author" class="row extra fixed-bottom text-center textOutline mt-2"></p>
+		<p id="author" class="row extra fixed-bottom text-center textOutline mt-4"></p>
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

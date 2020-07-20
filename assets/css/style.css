@@ -43,3 +43,11 @@ body{
   -webkit-text-stroke: .4px black;
   font-weight: bold;
 }
+
+
+.visable{
+display: block!important;
+}
+.hidden{
+display: none!important;
+}
